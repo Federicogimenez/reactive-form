@@ -1,0 +1,54 @@
+<div class="contenido-dinamico">
+    <form class="formulario" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="grid-item">
+          <label >Nombre</label>
+          <input formControlName="firstName" type="text" placeholder="Tom">
+          <div 
+            *ngIf="registrationForm.controls['firstName'].errors && registrationForm.controls['firstName'].dirty">
+            El nombre es obligatorio
+          </div>
+        </div>
+        <div class="grid-item">
+          <label>Apellido</label>
+          <input formControlName="lastName" type="text" placeholder="Thompson">
+          <div
+            *ngIf="registrationForm.controls['lastName'].errors && registrationForm.controls['lastName'].dirty">
+            Apellido obligatorio.
+          </div>
+        </div>
+        <div class="grid-item">
+          <label>Email </label>
+          <input formControlName="email" type="email" placeholder="thompsontom@example.com">
+          <div *ngIf="registrationForm.controls['email'].errors &&
+      registrationForm.controls['email'].dirty"> El email es invalido. </div>
+        </div>
+        <div class="grid-item">
+          <label>Contraseña</label>
+          <input formControlName="password" type="password">
+          <div *ngIf="registrationForm.controls['password'].errors && registrationForm.controls['password'].dirty">
+            Contraseña obligatoria.
+          </div>
+        </div>
+        <div class="grid-item">
+            <label>Numero de telefono</label>
+            <input formControlName="celNumber" type="text" placeholder="22288390911">
+            <div
+              *ngIf="registrationForm.controls['celNumber'].errors && registrationForm.controls['celNumber'].dirty">
+              Número telefonico obligatorio.
+            </div>
+          </div>
+          <div class="grid-item">
+            <label>Destino</label>
+            <input formControlName="destination" type="text" placeholder="Mar del Plata">
+            <div
+              *ngIf="registrationForm.controls['destination'].errors && registrationForm.controls['destination'].dirty">
+              Indica el detino de tu viaje.
+            </div>
+          </div>
+
+        <div class="grid-item-button">
+            <button [disabled]="registrationForm.invalid" type="submit">Registrate</button>
+            <span>Clickeando en el boton aceptas los <a href="https://es-la.facebook.com/groups/858920397587905/">Terminos y Condiciones</a></span>
+        </div>
+      </form>
+</div>

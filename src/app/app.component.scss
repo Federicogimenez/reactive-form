@@ -1,0 +1,31 @@
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #335555;
+    position: fixed;
+    top: 0;
+}
+h1{
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+}
+footer{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #3a3355;
+
+    p{
+        color: #fff;
+        font-size: 30px;
+        display: inline-block;
+    }
+}
